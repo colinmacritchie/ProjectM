@@ -1,0 +1,16 @@
+{
+  "name": "workbox",
+  "version": "0.0.1",
+  "dependencies": {
+    "gridstack": "~0.2.2",
+    "angular-ui-tree": "~2.2.0",
+    "ui-bootstrap": "~0.12.1",
+    "angular-dashboard-framework": "~0.8.0",
+    "adf-structures-base": "~0.1.0",
+    "adf-widget-clock": "~0.1.0"
+  },
+  "resolutions": {
+    "angular-dashboard-framework": "~0.8.0",
+    "bootstrap": "3.3.4"
+  }
+}

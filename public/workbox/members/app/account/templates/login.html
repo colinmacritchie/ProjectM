@@ -1,0 +1,71 @@
+<div class="row">
+    <div id="inner" class="col-md-offset-3 col-md-6 col-sm-12 col-xs-12 bgray2 tgray">
+
+            <div class="row">
+                <div class="col-md-2 col-sm-4 col-xs-4">
+                    <a href="/"><img id="blue-logo" src="../images/blue-logo.png"></a>
+                </div>
+                <div class="col-md-offset-5 col-md-5 col-sm-8 col-xs-8">
+                    <a href="/members/#/signup/">
+                        <span id="sign-up-button" class="pull-right">SIGN UP NOW FOR FREE!</span>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center top-padding bottom-padding">
+                    <h3>WELCOME BACK!</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8 col-sm-offset-3 col-sm-6 col-xs-12">
+                        <form ng-submit="login(form)">
+                            <div class="sheet">
+                                <label>EMAIL ADDRESS</label>
+                                <input type="text" name="email" ng-model="user.email" placeholder="WHATS YOUR EMAIL ADDRESS?" />
+                            </div>
+                            <div ng-show="error" class="alert alert-danger">
+                                <p>{{ error }}</p>
+                            </div>
+                            <div class="sheet">
+                                <label>PASSWORD</label>
+                                <input type="password" name="password" ng-model="user.password" placeholder="WHATS YOUR PASSWORD?" />
+                            </div>
+                            <div id="big-submit">
+                                <input type="submit" value="SIGN IN" />
+                            </div>
+                            <input type="checkbox">KEEP ME SIGNED IN? <span class="pull-right"><a href="#">FORGOT YOUR PASSWORD?</a></span>
+                        </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="or-list text-center col-md-offset-2 col-md-8 col-sm-offset-3 col-sm-6 col-xs-12">
+                    <ul>
+                        <li><img src="../images/hr.png"></li>
+                        <li>OR</li>
+                        <li><img src="../images/hr.png"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="logo-list col-md-offset-2 col-md-8 col-sm-offset-3 col-sm-6 col-xs-12">
+                    <ul>
+                        <li>LOGIN WITH:</li>
+                        <li><img src="../images/fb1.png"></li>
+                        <li><img src="../images/gp1.png"></li>
+                        <li><img src="../images/li1.png"></li>
+                        <li><img src="../images/t1.png"></li>
+                    </ul>
+                </div>
+            </div>
+
+    </div>
+</div>
+
+<script>
+    var height = $(window).height();
+    if (height < 800) {
+        height = 800;
+    }
+    $("#inner").css("height", height);
+    $("body").addClass("bgray1");
+</script>

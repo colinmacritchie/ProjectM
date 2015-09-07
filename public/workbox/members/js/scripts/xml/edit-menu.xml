@@ -1,0 +1,5 @@
+<menu id="0">
+	<item text="View" img="" id="view"/>
+	<item text="Rename" img="" id="rename"/>
+	<item text="Remove" img="" id="remove"/>
+</menu>

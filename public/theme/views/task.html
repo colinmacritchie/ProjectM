@@ -1,0 +1,190 @@
+<!-- BEGIN PAGE HEADER-->
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="#/dashboard.html">Dashboard</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<i class="icon-briefcase"></i>
+			<a href="#/boxes">Boxes</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">Task</a>
+		</li>
+	</ul>
+	<div class="page-toolbar">
+		<div class="btn-group pull-right">
+		<div ng-controller="treeCtrl">
+			<button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" dropdown-menu-hover data-delay="1000" data-close-others="true">
+			Actions <i class="fa fa-angle-down"></i>
+			</button>
+			<ul class="dropdown-menu pull-right" role="menu">
+				<li>
+					<a href="javascript:addWidget('itemNotes');">
+					<i class="icon-pencil"></i> View Notes </a>
+				</li>
+				<li>
+					<a href="javascript:addWidget('itemAlerts');">
+					<i class="icon-bell"></i> View Alerts </a>
+				</li>
+				<li>
+					<a href="javascript:addWidget('itemActivities');">
+					<i class="icon-energy"></i> View Activities </a>
+				</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<h3 class="page-title">
+	Task Name
+</h3>
+<!-- END PAGE HEADER-->
+
+
+<div class="container">
+<!-- BEGIN PAGE CONTENT-->
+	<div class="row">
+		<div class="grid-stack">
+					
+				<div class="col-md-6 col-sm-6  grid-stack-item" data-custom-id="itemDetails" id="itemDetails"
+					data-gs-auto-position="true" data-gs-width="6" data-gs-height="5">
+					<!-- BEGIN PORTLET-->
+					<div class="portlet light grid-stack-item-content">
+						<div class="portlet-title">
+							<div class="caption caption-md">
+								<i class="icon-doc font-green-haze"></i>
+								<span class="caption-subject font-green-haze bold uppercase">Task</span>
+							</div>
+							<div class="actions">
+								<div class="btn-group">
+									<span ng-click="showIt=!showIt">
+										<a href="javascript:togglePin('itemDetails', false)" ng-show="!showIt" ><i class="icon-pin"></i></a>
+										<a href="javascript:togglePin('itemDetails', true)" ng-show="showIt"><i class="icon-cursor-move"></i></a>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="scroller" style="height: 329px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+
+							</div>
+						</div>
+					</div>
+					<!-- END PORTLET-->
+				</div>
+				
+				<div class="col-md-6 col-sm-6  grid-stack-item" data-custom-id="itemNotes" id="itemNotes"
+					data-gs-auto-position="true" data-gs-width="6" data-gs-height="5">
+					<!-- BEGIN PORTLET-->
+					<div class="portlet light grid-stack-item-content">
+						<div class="portlet-title">
+							<div class="caption caption-md">
+								<i class="icon-pencil font-green-haze"></i>
+								<span class="caption-subject font-green-haze bold uppercase">Notes</span>
+							</div>
+							<div class="actions">
+								<div class="btn-group">
+									<span ng-click="showIt2=!showIt2">
+										<a href="javascript:togglePin('itemNotes', false)" ng-show="!showIt2" ><i class="icon-pin"></i></a>
+										<a href="javascript:togglePin('itemNotes', true)" ng-show="showIt2"><i class="icon-cursor-move"></i></a>
+									</span>
+									<a href="javascript:removeWidget('itemNotes')">
+										<i class="icon-close"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="scroller" style="height: 329px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+
+							</div>
+						</div>
+					</div>
+					<!-- END PORTLET-->
+				</div>
+				
+				<div class="col-md-6 col-sm-6  grid-stack-item" data-custom-id="itemAlerts" id="itemAlerts"
+					data-gs-auto-position="true" data-gs-width="6" data-gs-height="5">
+					<!-- BEGIN PORTLET-->
+					<div class="portlet light grid-stack-item-content">
+						<div class="portlet-title">
+							<div class="caption caption-md">
+								<i class="icon-bell font-green-haze"></i>
+								<span class="caption-subject font-green-haze bold uppercase">Alerts</span>
+							</div>
+							<div class="actions">
+								<div class="btn-group">
+									<span ng-click="showIt3=!showIt3">
+										<a href="javascript:togglePin('itemAlerts', false)" ng-show="!showIt3" ><i class="icon-pin"></i></a>
+										<a href="javascript:togglePin('itemAlerts', true)" ng-show="showIt3"><i class="icon-cursor-move"></i></a>
+									</span>
+									<a href="javascript:removeWidget('itemAlerts')">
+										<i class="icon-close"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="scroller" style="height: 329px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+
+							</div>
+						</div>
+					</div>
+					<!-- END PORTLET-->
+				</div>
+				
+				<div class="col-md-6 col-sm-6  grid-stack-item" data-custom-id="itemActivities" id="itemActivities"
+					data-gs-auto-position="true" data-gs-width="6" data-gs-height="5">
+					<!-- BEGIN PORTLET-->
+					<div class="portlet light grid-stack-item-content">
+						<div class="portlet-title">
+							<div class="caption caption-md">
+								<i class="icon-energy font-green-haze"></i>
+								<span class="caption-subject font-green-haze bold uppercase">Activities</span>
+							</div>
+							<div class="actions">
+								<div class="btn-group">
+									<span ng-click="showIt4=!showIt4">
+										<a href="javascript:togglePin('itemActivities', false)" ng-show="!showIt4" ><i class="icon-pin"></i></a>
+										<a href="javascript:togglePin('itemActivities', true)" ng-show="showIt4"><i class="icon-cursor-move"></i></a>
+									</span>
+									<a href="javascript:removeWidget('itemActivities')">
+										<i class="icon-close"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="scroller" style="height: 329px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+
+							</div>
+						</div>
+					</div>
+					<!-- END PORTLET-->
+				</div>
+		
+		<script type="text/javascript">
+			$(function () {
+			    var options = {
+			        cell_height: 80,
+			        vertical_margin: 10
+			    };
+			    $('.grid-stack').gridstack(options);
+			});
+		</script>
+		
+		</div>
+	</div>
+	<!-- END PAGE CONTENT-->
+</div>
+<!-- END PAGE CONTENT-->
+
+
+<script>
+Task.init(); // init  page
+loadTaskDashboardGrid();
+  </script>

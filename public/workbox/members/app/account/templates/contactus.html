@@ -1,0 +1,44 @@
+	<div data-ng-include="'pages/navbar.html'"></div>
+
+    <div id="main-header" class="twhite">
+        <div data-ng-include="'pages/header.html'"></div>
+    </div>
+
+    <div id="contact-info" class="bwhite side-padding row-wrapper font-big bluelink tgray">
+        <div class="row top-medium-padding bottom-medium-padding">
+            <div class="col-md-offset-4 col-md-2">
+                <img class="hidden-sm hidden-xs" src="../images/customer-support.png">
+                <p>Customer Support</p>
+                <p>888-888-8888</p>
+            </div>
+            <div class="col-md-2">
+                <img class="hidden-sm hidden-xs" src="../images/plane.png">
+                <p><a href="mailto:support@workbox.com">support@workbox.com</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bgray side-padding row-wrapper">
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4 text-center">
+                <h1>Get In Touch</h1>
+                <p class="tgray">We're here for you, and we're wearing our thinking caps.</p>
+                <p class="tgray bluelink">You might also find what you're looking for by visiting our <a href="#">FAQ page</a>.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4 workbox-form">
+                <form>
+                    <input type="text" ng-model="name" placeholder="Name"><br>
+                    <input type="text" ng-model="email" placeholder="Email"><br>
+                    <input type="text" ng-model="regarding" placeholder="Regarding"><br>
+                    <input type="text" ng-model="message" placeholder="Message"><br>
+                    <input ng-click="sendemail()" type="submit" value="SEND IT">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+	<div data-ng-include="'pages/footer.html'"></div>

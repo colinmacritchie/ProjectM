@@ -1,0 +1,6 @@
+<menu id="0">
+	<item text="Create" img="" id="create"/>
+	<item text="Rename" img="" id="rename"/>
+	<item text="Edit Description" img="" id="edit"/>
+	<item text="Remove" img="" id="remove"/>
+</menu>

@@ -1,0 +1,389 @@
+<div name="themeWrapper">
+	<!-- BEGIN HEADER -->
+	<div data-ng-include="'tpl/header.html'" data-ng-controller="HeaderController" class="page-header navbar navbar-fixed-top">
+	</div>
+	<!-- END HEADER -->
+
+	<div class="clearfix">
+	</div>
+
+	<!-- BEGIN CONTAINER -->
+	<div class="page-container">
+		<!-- BEGIN SIDEBAR ->
+		<div data-ng-include="'tpl/sidebar.html'" data-ng-controller="SidebarController" class="page-sidebar-wrapper">			
+		</div>
+		<!- END SIDEBAR -->
+
+		<!-- BEGIN CONTENT -->
+		<div class="page-content-wrapper">
+			<div class="page-content">
+				<!-- BEGIN ACTUAL CONTENT -->
+					
+
+<!-- BEGIN PAGE HEADER-->
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="#/dashboard.html">Dashboard</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<i class="icon-briefcase"></i>
+			<a href="#/boxes">Boxes</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#/box/task?id={{boxId}}">Box</a>
+		</li>
+	</ul>
+	<div class="page-toolbar">
+		<div class="btn-group pull-right">
+		<div ng-controller="treeCtrl">
+			<button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" dropdown-menu-hover data-delay="1000" data-close-others="true">
+			Actions <i class="fa fa-angle-down"></i>
+			</button>
+			<ul class="dropdown-menu pull-right" role="menu">
+				<li>
+					<a href="javascript:addWidget('itemProjects');">
+					<i class="icon-folder-alt"></i> View Projects </a>
+				</li>
+				<li>
+					<a href="javascript:addWidget('itemTasks');">
+					<i class="icon-doc"></i> View Tasks </a>
+				</li>
+				<li>
+					<a href="javascript:addWidget('itemRoadMap');">
+					<i class="icon-graph"></i> View Road Map </a>
+				</li>
+				<li>
+					<a href="javascript:addWidget('itemActivities');">
+					<i class="icon-energy"></i> View Activities </a>
+				</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<h3 class="page-title">
+{{boxName}}
+</h3>
+<!-- END PAGE HEADER-->
+
+<div class="container">
+<!-- BEGIN PAGE CONTENT-->
+	<div class="row">
+		<div class="grid-stack" data-gs-animate="true" data-gs-width="12">
+					
+				<div class="col-md-6 col-sm-6  grid-stack-item" data-custom-id="itemProjects" id="itemProjects"
+					data-gs-auto-position="true" data-gs-width="6" data-gs-height="5">
+					<!-- BEGIN PORTLET-->
+					<div class="portlet light grid-stack-item-content">
+						<div class="portlet-title">
+							<div class="caption caption-md">
+								<i class="icon-doc font-green-haze"></i>
+								<span class="caption-subject font-green-haze bold uppercase">Projects</span>
+							</div>
+							<div class="actions">
+								<div class="btn-group" style="padding-left:10px">
+									<span ng-click="showIt2=!showIt2">
+										<a href="javascript:togglePin('itemProjects', false)" ng-show="!showIt2" ><i class="icon-pin"></i></a>
+										<a href="javascript:togglePin('itemProjects', true)" ng-show="showIt2"><i class="icon-cursor-move"></i></a>
+									</span>
+									<a href="javascript:removeWidget('itemProjects')">
+										<i class="icon-close"></i>
+									</a>
+								</div>
+							</div>
+							<a href="#" ng-click="addNewProject();">
+								<button type="button" class="pull-right btn btn-sm btn-circle green-haze"> &nbsp; Create Project &nbsp; </button>
+							</a>
+						</div>
+						<div class="portlet-body">
+								<div id="row" style="width:100%;text-align:right;">
+									<div class="btn-group">
+										<a class="btn btn-sm btn-default btn-circle" href="#" data-toggle="dropdown" dropdown-menu-hover data-close-others="true">
+										Search By <i class="fa fa-angle-down"></i>
+										</a>
+										<div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+											<label><input type="checkbox"/> Priority</label>
+											<label><input type="checkbox" checked=""/> Name</label>
+											<label><input type="checkbox"/>Status</label>
+											<label><input type="checkbox" /> Owner</label>
+											<label><input type="checkbox" value="Description"  /> Description</label>
+											<label><input type="checkbox" value="Date Created" />Date Created</label>
+											<label><input type="checkbox" value="Date Complete"  />Date Complete</label>
+											<label><input type="checkbox" value="Date Start" />Date Start</label>
+											<label><input type="checkbox" value="Date Due" />Date Due</label>
+											<label><input type="checkbox"  value="Creator" />Creator</label>
+										</div>
+									</div>
+									<div class="portlet-input input-small input-inline">
+										<div class="input-icon right">
+											<i class="icon-magnifier"></i>
+											<input type="text" class="form-control form-control-solid" placeholder="search...">
+										</div>
+									</div>
+									<div class="btn-group">
+										<a class="btn btn-sm btn-default btn-circle" href="#" data-toggle="dropdown" dropdown-menu-hover data-close-others="true">
+										View Columns<i class="fa fa-angle-down"></i>
+										</a>
+										<div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+											<label><input type="checkbox" checked=""  value="Status" ng-click="changeDisplayProjectGridColumn('Status')"/>Status</label>
+											<label><input type="checkbox"  checked="" value="Owner" ng-click="changeDisplayProjectGridColumn('Owner')"/>Owner</label>
+											<label><input type="checkbox" value="Date Created" ng-click="changeDisplayProjectGridColumn('Date Created')"/>Date Created</label>
+											<label><input type="checkbox" value="Date Complete" ng-click="changeDisplayProjectGridColumn('Date Complete')" />Date Complete</label>
+											<label><input type="checkbox" value="Date Start" ng-click="changeDisplayProjectGridColumn('Date Start')"/>Date Start</label>
+											<label><input type="checkbox" value="Date Due" ng-click="changeDisplayProjectGridColumn('Date Due')"/>Date Due</label>
+											<label><input type="checkbox"  value="Creator" ng-click="changeDisplayProjectGridColumn('Creator')"/>Creator</label>
+											<label><input type="checkbox" value="Description" ng-click="changeDisplayProjectGridColumn('Description')" /> Description</label>
+										</div>
+									</div>
+								</div>
+								<div id="gridbox-projects" style="width:100%;height:100%;"></div> 
+						</div>
+					</div>
+					<!-- END PORTLET-->
+				</div>
+				
+				<div class="col-md-6 col-sm-6  grid-stack-item" data-custom-id="itemTasks" id="itemTasks"
+					data-gs-auto-position="true" data-gs-width="6" data-gs-height="5">
+					<!-- BEGIN PORTLET-->
+					<div class="portlet light grid-stack-item-content">
+						<div class="portlet-title">
+							<div class="caption caption-md">
+								<i class="icon-doc font-green-haze"></i>
+								<span class="caption-subject font-green-haze bold uppercase">Tasks</span>
+							</div>
+							<div class="actions">
+								<div class="btn-group" style="padding-left:10px">
+									<span ng-click="showIt2=!showIt2">
+										<a href="javascript:togglePin('itemTasks', false)" ng-show="!showIt2" ><i class="icon-pin"></i></a>
+										<a href="javascript:togglePin('itemTasks', true)" ng-show="showIt2"><i class="icon-cursor-move"></i></a>
+									</span>
+									<a href="javascript:removeWidget('itemTasks')">
+										<i class="icon-close"></i>
+									</a>
+								</div>
+							</div>
+							<!--  what projectId would this task belong to? -->
+							<!--  a href="#" ng-click="addNewTask();">
+								<button type="button" class="pull-right btn btn-sm btn-circle green-haze"> &nbsp; Create Task &nbsp; </button>
+							</a -->
+						</div>
+						<div class="portlet-body">
+								<div id="row" style="width:100%;text-align:right;">
+									<div class="btn-group">
+										<a class="btn btn-sm btn-default btn-circle" href="#" data-toggle="dropdown" dropdown-menu-hover data-close-others="true">
+										Search By <i class="fa fa-angle-down"></i>
+										</a>
+										<div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+											<label><input type="checkbox"/> Priority</label>
+											<label><input type="checkbox" checked=""/> Name</label>
+											<label><input type="checkbox"/>Status</label>
+											<label><input type="checkbox" /> Owner</label>
+											<label><input type="checkbox" value="Date Created" />Date Created</label>
+											<label><input type="checkbox" value="Date Complete"  />Date Complete</label>
+											<label><input type="checkbox" value="Date Start" />Date Start</label>
+											<label><input type="checkbox" value="Date Due" />Date Due</label>
+											<label><input type="checkbox"  value="Creator" />Creator</label>
+											<label><input type="checkbox" value="Description"  /> Description</label>
+											<label><input type="checkbox" value="Hours Estimate" />Hours Estimate</label>
+											<label><input type="checkbox"  value="Hours Actual" />Hours Actual</label>
+											<label><input type="checkbox" value="Hours To Do"  /> Hours To Do</label>
+										</div>
+									</div>
+									<div class="portlet-input input-small input-inline">
+										<div class="input-icon right">
+											<i class="icon-magnifier"></i>
+											<input type="text" class="form-control form-control-solid" placeholder="search...">
+										</div>
+									</div>
+									<div class="btn-group">
+										<a class="btn btn-sm btn-default btn-circle" href="#" data-toggle="dropdown" dropdown-menu-hover data-close-others="true">
+										View Columns<i class="fa fa-angle-down"></i>
+										</a>
+										<div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+											<label><input type="checkbox" checked=""  value="Status" ng-click="changeDisplayTaskGridColumn('Status')"/>Status</label>
+											<label><input type="checkbox"  checked="" value="Owner" ng-click="changeDisplayTaskGridColumn('Owner')"/>Owner</label>
+											<label><input type="checkbox" value="Date Created" ng-click="changeDisplayTaskGridColumn('Date Created')"/>Date Created</label>
+											<label><input type="checkbox" value="Date Complete" ng-click="changeDisplayTaskGridColumn('Date Complete')" />Date Complete</label>
+											<label><input type="checkbox" value="Date Start" ng-click="changeDisplayTaskGridColumn('Date Start')"/>Date Start</label>
+											<label><input type="checkbox" value="Date Due" ng-click="changeDisplayTaskGridColumn('Date Due')"/>Date Due</label>
+											<label><input type="checkbox"  value="Creator" ng-click="changeDisplayTaskGridColumn('Creator')"/>Creator</label>
+											<label><input type="checkbox" value="Description" ng-click="changeDisplayTaskGridColumn('Description')" /> Description</label>
+											<label><input type="checkbox" value="Hours Estimate" ng-click="changeDisplayTaskGridColumn('Hours Estimate')"/>Hours Estimate</label>
+											<label><input type="checkbox"  value="Hours Actual" ng-click="changeDisplayTaskGridColumn('Hours Actual')"/>Hours Actual</label>
+											<label><input type="checkbox" value="Hours To Do" ng-click="changeDisplayTaskGridColumn('Hours To Do')" /> Hours To Do</label>
+										</div>
+									</div>
+								</div>
+								<div id="gridbox-tasks" style="width:100%;height:100%;"></div> 
+						</div>
+					</div>
+					<!-- END PORTLET-->
+				</div>
+				
+				<div class="col-md-6 col-sm-6  grid-stack-item" data-custom-id="itemRoadMap" id="itemRoadMap"
+					data-gs-auto-position="true" data-gs-width="6" data-gs-height="5">
+					<!-- BEGIN PORTLET-->
+					<div class="portlet light grid-stack-item-content">
+						<div class="portlet-title">
+							<div class="caption caption-md">
+								<i class="icon-graph font-green-haze"></i>
+								<span class="caption-subject font-green-haze bold uppercase">Road Map</span>
+							</div>
+							<div class="actions">
+								<div class="btn-group" style="padding-left:10px">
+									<span ng-click="showIt3=!showIt3">
+										<a href="javascript:togglePin('itemRoadMap', false)" ng-show="!showIt3" ><i class="icon-pin"></i></a>
+										<a href="javascript:togglePin('itemRoadMap', true)" ng-show="showIt3"><i class="icon-cursor-move"></i></a>
+									</span>
+									<a href="javascript:removeWidget('itemRoadMap')">
+										<i class="icon-close"></i>
+									</a>
+								</div>
+							</div>
+							<div class="portlet-input input-small input-inline pull-right">
+								<div class="input-icon right">
+									<i class="icon-magnifier"></i>
+									<input type="text" class="form-control form-control-solid" placeholder="search...">
+								</div>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="scroller" style="height: 329px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+								<div class='controls_bar'>
+									<strong> Show: &nbsp; </strong>
+									<label>
+										<input name='scales_roadmap' ng-click='zoom_roadmap("week")' type='radio' value='week'>
+										<span>Hours</span></label>
+									<label>
+										<input name='scales_roadmap' ng-click='zoom_roadmap("trplweek")' type='radio' value='trplweek'  checked='true'>
+										<span>Days</span></label>
+									<label>
+										<input name='scales_roadmap' ng-click='zoom_roadmap("year")' type='radio' value='year'>
+										<span>Months</span></label>
+								</div>
+								<div id="gantt_roadmap" style='width:100%; height:100%;'></div>
+
+							</div>
+						</div>
+					</div>
+					<!-- END PORTLET-->
+				</div>
+				
+				<div class="col-md-6 col-sm-6  grid-stack-item" data-custom-id="itemActivities" id="itemActivities"
+					data-gs-auto-position="true" data-gs-width="6" data-gs-height="5">
+					<!-- BEGIN PORTLET-->
+					<div class="portlet light grid-stack-item-content">
+						<div class="portlet-title">
+							<div class="caption caption-md">
+								<i class="icon-energy font-green-haze"></i>
+								<span class="caption-subject font-green-haze bold uppercase">Activities</span>
+							</div>
+							<div class="actions">
+								<div class="btn-group" style="padding-left:10px">
+									<span ng-click="showIt4=!showIt4">
+										<a href="javascript:togglePin('itemActivities', false)" ng-show="!showIt4" ><i class="icon-pin"></i></a>
+										<a href="javascript:togglePin('itemActivities', true)" ng-show="showIt4"><i class="icon-cursor-move"></i></a>
+									</span>
+									<a href="javascript:removeWidget('itemActivities')">
+										<i class="icon-close"></i>
+									</a>
+								</div>
+							</div>
+							<a href="javascript:Box.exportActivitiesReport();">
+								<button type="button" class="pull-right btn btn-sm btn-circle green-haze"> &nbsp; Export Report &nbsp; </button>
+							</a>
+						</div>
+						<div class="portlet-body">
+							<div id="row" style="width:100%;text-align:right;">
+									<div class="btn-group">
+										<a class="btn btn-sm btn-default btn-circle" href="#" data-toggle="dropdown" dropdown-menu-hover data-close-others="true">
+										Search By <i class="fa fa-angle-down"></i>
+										</a>
+										<div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+											<label><input type="checkbox"/> Property Changed</label>
+											<label><input type="checkbox" checked=""/> Description of Change</label>
+											<label><input type="checkbox" value="Value Before Change" />Value Before Change</label>
+											<label><input type="checkbox"  value="Value After Change" />Value After Change</label>
+											<label><input type="checkbox" value="Creator" />Creator</label>
+											<label><input type="checkbox" value="Date Created"  />Date Created</label>
+										</div>
+									</div>
+									<div class="portlet-input input-small input-inline">
+										<div class="input-icon right">
+											<i class="icon-magnifier"></i>
+											<input type="text" class="form-control form-control-solid" placeholder="search...">
+										</div>
+									</div>
+									<div class="btn-group">
+										<a class="btn btn-sm btn-default btn-circle" href="#" data-toggle="dropdown" dropdown-menu-hover data-close-others="true">
+										View Columns<i class="fa fa-angle-down"></i>
+										</a>
+										<div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+											<label><input type="checkbox" checked=""  value="Value Before Change" onclick="Box.changeDisplayActivitiesGridColumn(this)"/>Value Before Change</label>
+											<label><input type="checkbox"  checked="" value="Value After Change" onclick="Box.changeDisplayActivitiesGridColumn(this)"/>Value After Change</label>
+											<label><input type="checkbox" value="Creator" onclick="Box.changeDisplayActivitiesGridColumn(this)"/>Creator</label>
+											<label><input type="checkbox" value="Date Created" onclick="Box.changeDisplayActivitiesGridColumn(this)" />Date Created</label>
+										</div>
+									</div>
+								</div>
+							<div id="gridbox-activities" style="width:100%;height:100%;"></div> 
+						</div>
+					</div>
+					<!-- END PORTLET-->
+				</div>
+		
+		<script type="text/javascript">
+			$(function () {
+			    var options = {
+			        cell_height: 80,
+			        vertical_margin: 10,
+			        animate:true,
+			        float:true
+			    };
+			    $('.grid-stack').gridstack(options);
+			});
+		</script>
+		
+		</div>
+	</div>
+	<!-- END PAGE CONTENT-->
+</div>
+<!-- END MAIN CONTENT -->
+				<!-- END ACTUAL CONTENT -->
+			</div>	
+		</div>
+		<!-- END CONTENT -->
+		
+		<!-- BEGIN QUICK SIDEBAR -->
+		<a href="javascript:;" class="page-quick-sidebar-toggler"><i class="icon-close"></i></a>
+		<div data-ng-include="'tpl/quick-sidebar.html'" data-ng-controller="QuickSidebarController" class="page-quick-sidebar-wrapper"></div>
+		<!-- END QUICK SIDEBAR -->
+	</div>
+	<!-- END CONTAINER -->
+
+	<!-- BEGIN FOOTER -->
+	<div data-ng-include="'tpl/footer.html'" data-ng-controller="FooterController" class="page-footer">
+	</div>
+	<!-- END FOOTER -->
+</div>
+
+<script>
+Box.init(); // init  page
+loadBoxDashboardGrid();
+
+Box.resizeActivitiesGrid(document.getElementById('itemActivities').clientHeight, document.getElementById('itemActivities').clientWidth);
+
+$('.grid-stack').on('resizestop', function (event, ui) {	
+    var grid = this;
+    var element = event.target;
+    switch(element.id){
+    case "itemActivities":
+    	Box.resizeActivitiesGrid(document.getElementById('itemActivities').clientHeight, document.getElementById('itemActivities').clientWidth);
+    	break;
+    }
+});
+  </script>

@@ -1,0 +1,107 @@
+<!-- BEGIN PAGE HEADER-->
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="#/dashboard.html">Home</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">Boxes</a>
+		</li>
+	</ul>
+	<div class="page-toolbar">
+		<div class="btn-group pull-right">
+		<div ng-controller="treeCtrl">
+			<button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" dropdown-menu-hover data-delay="1000" data-close-others="true">
+			Actions <i class="fa fa-angle-down"></i>
+			</button>
+			<ul class="dropdown-menu pull-right" role="menu">
+				<li>
+					<a href="javascript:collapseAllTree()">
+					<i class="icon-magnifier-remove"></i>Collapse all</a>
+				</li>
+				<li>
+					<a href="javascript:expandAllTree()">
+					<i class="icon-magnifier-add"></i> Expand all</a>
+				</li>
+				<li class="divider">
+				</li>
+				<li>
+					<a href="javascript:createNewBox()" >
+					<i class="icon-briefcase"></i> New Box </a>
+				</li>
+				<li>
+					<a href="javascript:createNewProject()" >
+					<i class="icon-folder-alt"></i> New Project</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:createNewTask()" >
+					<i class="icon-doc"></i> New Task </a>
+				</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END PAGE HEADER-->
+
+<!-- BEGIN PAGE CONTENT-->
+<div class="row">
+	<div class="col-md-12">
+			<!-- BEGIN TODO CONTENT -->
+			<div class="todo-content">
+				<div class="portlet light">
+					<div class="container">
+						<div id="tree-boxes" class="tree-boxes">
+				</div>
+			</div>
+			<!-- END TODO CONTENT -->
+		</div>
+	</div>
+	<!-- END PAGE CONTENT-->
+</div>
+<!-- END PAGE CONTENT-->
+
+<script>
+BoxTree.init(); // init  page
+
+function expandAllTree(){
+	$("#tree-boxes").jstree("open_all");  
+}
+
+function collapseAllTree(){
+	$("#tree-boxes").jstree("close_all");  
+}
+
+function createNewBox(){
+ 	var parent = $('#tree-boxes').jstree('get_selected');
+	var tree = $("#tree-boxes").jstree(true);
+	var node = tree.create_node(parent, {
+        "text": "New Box",
+        "icon": "icon-briefcase"
+    });
+    tree.edit(node);
+}
+
+function createNewProject(){
+ 	var parent = $('#tree-boxes').jstree('get_selected');
+	var tree = $("#tree-boxes").jstree(true);
+	var node = tree.create_node(parent, {
+        "text": "New Project",
+        "icon": "icon-folder-alt"
+    });
+    tree.edit(node);
+}
+
+function createNewTask(){
+ 	var parent = $('#tree-boxes').jstree('get_selected');
+	var tree = $("#tree-boxes").jstree(true);
+	var node = tree.create_node(parent, {
+        "text": "New Task",
+        "icon": "icon-doc"
+    });
+    tree.edit(node);
+}
+  </script>

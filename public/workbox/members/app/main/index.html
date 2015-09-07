@@ -1,0 +1,73 @@
+<!-- BEGIN HEADER -->
+	<div data-ng-include="'tpl/header.html'" class="page-header navbar navbar-fixed-top"></div>
+	<!-- END HEADER -->
+  <div class="clearfix"></div>
+
+  <!-- BEGIN CONTAINER -->
+	<div class="page-container">
+		<!-- BEGIN CONTENT -->
+		<div class="page-content-wrapper">
+			<div class="page-content">
+				<!-- BEGIN ACTUAL CONTENT -->
+
+
+
+<!-- BEGIN PAGE HEADER-->
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="#/dashboard.html">Home</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">Dashboard</a>
+		</li>
+	</ul>
+	<div class="page-toolbar">
+		<div class="btn-group pull-right">
+			<button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" dropdown-menu-hover data-delay="1000" data-close-others="true">
+			Actions <i class="fa fa-angle-down"></i>
+			</button>
+			<ul class="dropdown-menu pull-right" role="menu">
+				<li>
+					<a href="javascript:addWidget('itemBoxes');">
+					<i class="icon-user"></i> View Boxes </a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<h3 class="page-title">
+	Dashboard
+</h3>
+<!-- END PAGE HEADER-->
+<div>
+    <ul>
+        <li ng-show="!loggedIn()"><a ui-sref="signup">Sign up</a></li>
+        <li ng-show="!loggedIn()"><a ui-sref="login">Login</a></li>
+        <li ng-show="loggedIn()"><button ng-click="logOut()">Log out</button></li>
+    </ul>
+</div>
+
+
+
+
+
+				<!-- END ACTUAL CONTENT -->
+			</div>
+		</div>
+		<!-- END CONTENT -->
+
+		<!-- BEGIN QUICK SIDEBAR -->
+		<a href="javascript:;" class="page-quick-sidebar-toggler"><i class="icon-close"></i></a>
+		<div data-ng-include="'tpl/quick-sidebar.html'" class="page-quick-sidebar-wrapper"></div>
+		<!-- END QUICK SIDEBAR -->
+	</div>
+	<!-- END CONTAINER -->
+
+	<!-- BEGIN FOOTER -->
+	<div data-ng-include="'tpl/footer.html'" class="page-footer">
+	</div>
+	<!-- END FOOTER -->
+

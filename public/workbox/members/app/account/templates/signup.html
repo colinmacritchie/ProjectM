@@ -1,0 +1,44 @@
+	<div data-ng-include="'pages/navbar.html'"></div>
+
+    <div id="main-header" class="twhite">
+        <div data-ng-include="'pages/header.html'"></div>
+    </div>
+
+    <div class="bwhite side-padding row-wrapper">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-10 col-sm-offset-2 col-sm-8">
+                <div class="registration">
+                    <h1>Create your Workbox account</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-offset-2 col-md-4">
+                <div class="registration workbox-form">
+                    <form ng-submit="signup(form)">
+                    <input type="text" name="fullname" ng-model="user.fullname" placeholder="Full Name"><br>
+                    <input type="text" name="companyname" ng-model="user.companyname" placeholder="Company Name"><br>
+                    <input type="text" name="email" ng-model="user.email" placeholder="Email Address"><br>
+                    <input type="password" name="password" ng-model="user.password" placeholder="Password"><br>
+                    <input type="checkbox"><span class="tgray">&nbsp;Subscribe me to the monthly newsletter</span><br>
+                    <input type="submit" value="Sign Up Now">
+                    </form>
+                    <p class="tgray bluelink">Already have an accout? <a href="#">Sign in</a>.</p>
+                    <p class="tgray bluelink">By clicking you agree to our <a href="#">Terms of Service</a>, <a href="#">Privacy Policy</a> and <a href="#">Refund Policy</a></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="registration">
+                    <p class="graybox">Existing Workbox Customers &mdash; You do not need to register for a new account if you wish to use another of our products. If you create a separate new account, you will be unable to integrate it with your existing products and users.</p>
+                    <ul>
+                        <li>One account for all products</li>
+                        <li>No credit card required</li>
+                        <li>No per user fees. Unlimited users and companies!</li>
+                        <li>Upgrade, downgrade or cancel anytime.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<div data-ng-include="'pages/footer.html'"></div>

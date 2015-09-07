@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" data-ng-app="workboxApp">
+<head>
+    <meta charset="utf-8" />
+    <title>WorkBox Shell</title>
+    <base href="members"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author"/>
+    <link rel="stylesheet" type='text/css' href="../assets/theme/theme.bundle.css">
+    <link rel="stylesheet" type='text/css' href="../assets/theme/main.css">
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Roboto'>
+</head>
+
+<body>
+
+
+    <div ui-view></div>
+
+
+    <script src="../assets/theme/theme.bundle.js"></script>
+
+    <script src="../assets/lib/Sortable/Sortable.js"></script>
+    <script src="../assets/lib/angular-dashboard-framework/dist/angular-dashboard-framework.js"></script>
+    <script src="../assets/lib/adf-structures-base/dist/adf-structures-base.js"></script>
+    <script src="../assets/lib/adf-widget-clock/dist/adf-widget-clock.js"></script>
+
+    <script src="app/app.module.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/main/mainController.js"></script>
+    <script src="app/main/main.js"></script>
+    <script src="app/account/account.js"></script>
+    <script src="app/account/controllers/loginController.js"></script>
+    <script src="app/account/controllers/contactController.js"></script>
+    <script src="app/account/controllers/pricingController.js"></script>
+    <script src="app/account/controllers/signupController.js"></script>
+    <script src="app/shared/auth/services/authService.js"></script>
+    <script src="app/shared/auth/services/userService.js"></script>
+    <script src="app/shared/auth/services/tokenInterceptor.js"></script>
+
+    <script src="app/widgets/box/BoxController.js"></script>
+    <script src="app/widgets/box/boxDirective.js"></script>
+
+    <script src="app/theme/directives.js"></script>
+
+</body>
+</html>

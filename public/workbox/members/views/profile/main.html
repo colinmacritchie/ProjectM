@@ -1,0 +1,148 @@
+<div name="themeWrapper">
+	<!-- BEGIN HEADER -->
+	<div data-ng-include="'tpl/header.html'" data-ng-controller="HeaderController" class="page-header navbar navbar-fixed-top">
+	</div>
+	<!-- END HEADER -->
+
+	<div class="clearfix">
+	</div>
+
+	<!-- BEGIN CONTAINER -->
+	<div class="page-container">
+		<!-- BEGIN SIDEBAR ->
+		<div data-ng-include="'tpl/sidebar.html'" data-ng-controller="SidebarController" class="page-sidebar-wrapper">			
+		</div>
+		<!- END SIDEBAR -->
+
+		<!-- BEGIN CONTENT -->
+		<div class="page-content-wrapper">
+			<div class="page-content">
+				<!-- BEGIN ACTUAL CONTENT -->
+					
+
+<!-- BEGIN PAGE HEADER-->
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="#/dashboard.html">Dashboard</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#/profile/dashboard">Account</a>
+		</li>
+	</ul>
+	<div class="page-toolbar">
+		<div class="btn-group pull-right">
+			<!--  button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true">
+			Actions <i class="fa fa-angle-down"></i>
+			</button>
+			<ul class="dropdown-menu pull-right" role="menu">
+				<li>
+					<a href="#">
+					<i class="icon-user"></i> New User </a>
+				</li>
+				<li>
+					<a href="#">
+					<i class="icon-present"></i> New Event <span class="badge badge-success">4</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+					<i class="icon-basket"></i> New order </a>
+				</li>
+				<li class="divider">
+				</li>
+				<li>
+					<a href="#">
+					<i class="icon-flag"></i> Pending Orders <span class="badge badge-danger">4</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+					<i class="icon-users"></i> Pending Users <span class="badge badge-warning">12</span>
+					</a>
+				</li>
+			</ul-->
+		</div>
+	</div>
+</div>
+<h3 class="page-title">
+	Account
+</h3>
+<!-- END PAGE HEADER-->
+
+<!-- BEGIN PAGE CONTENT-->
+<div class="row" ng-controller="UserProfileController">
+	<div class="col-md-12">
+			<!-- PORTLET MAIN -->
+			<div class="portlet light">
+										<div class="portlet-body">
+							<div class="scroller" style="height: 100%;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+							<div class="portlet-body form">
+								<form role="form" name="userForm">
+									<div class="form-body">
+										<div class="form-group">
+											<label>First Name</label>
+											<input class="form-control" type="text" name="firstName" value="{{firstName}}"/>
+										</div>
+										<div class="form-group">
+											<label>Last Name</label>
+											<input class="form-control" type="text" name="lastName" value="{{lastName}}"/>
+										</div>
+										<div class="form-group">
+											<label>Company</label>
+											<input class="form-control" type="text" name="companyName" value="{{companyName}}"/>
+										</div>
+										<div class="form-group">
+											<label>Phone</label>
+											<input class="form-control" type="text" name="phoneNumber" value="{{phoneNumber}}"/>
+										</div>
+										<div class="form-group">
+											<label>Email</label>
+											<input class="form-control" type="text" name="email" value="{{email}}"/>
+										</div>
+										<!--  div class="form-group">
+											<label>Change Password</label>
+											<input type="password" class="form-control" type="text" name="password" value="{{password}}"/>
+										</div-->
+										<!-- upload/display avatar image, update newsletter option -->
+										<div class="form-actions right">
+											<button type="submit" class="btn blue" ng-click="saveUpdateUser()">Save</button>
+											<button type="button" class="btn default" onClick="this.form.reset()">Cancel</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>				
+			</div>
+			<!-- END PORTLET MAIN -->
+		</div>
+		<!-- END BEGIN PROFILE SIDEBAR -->
+		<!-- BEGIN PROFILE CONTENT -->
+		<!--
+		<div ui-view class="profile-content fade-in-up"> 
+		</div>
+		-->
+		<!-- END PROFILE CONTENT -->
+	</div>
+</div>
+<!-- END PAGE CONTENT-->
+<!-- END MAIN CONTENT -->
+				<!-- END ACTUAL CONTENT -->
+			</div>	
+		</div>
+		<!-- END CONTENT -->
+		
+		<!-- BEGIN QUICK SIDEBAR -->
+		<a href="javascript:;" class="page-quick-sidebar-toggler"><i class="icon-close"></i></a>
+		<div data-ng-include="'tpl/quick-sidebar.html'" data-ng-controller="QuickSidebarController" class="page-quick-sidebar-wrapper"></div>
+		<!-- END QUICK SIDEBAR -->
+	</div>
+	<!-- END CONTAINER -->
+
+	<!-- BEGIN FOOTER -->
+	<div data-ng-include="'tpl/footer.html'" data-ng-controller="FooterController" class="page-footer">
+	</div>
+	<!-- END FOOTER -->
+</div>

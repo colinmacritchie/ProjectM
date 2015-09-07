@@ -1,0 +1,112 @@
+<div name="themeWrapper">
+	<!-- BEGIN HEADER -->
+	<div data-ng-include="'tpl/header.html'" data-ng-controller="HeaderController" class="page-header navbar navbar-fixed-top">
+	</div>
+	<!-- END HEADER -->
+
+	<div class="clearfix">
+	</div>
+
+	<!-- BEGIN CONTAINER -->
+	<div class="page-container">
+		<!-- BEGIN SIDEBAR ->
+		<div data-ng-include="'tpl/sidebar.html'" data-ng-controller="SidebarController" class="page-sidebar-wrapper">			
+		</div>
+		<!- END SIDEBAR -->
+
+		<!-- BEGIN CONTENT -->
+		<div class="page-content-wrapper">
+			<div class="page-content">
+				<!-- BEGIN ACTUAL CONTENT -->
+				
+<!-- BEGIN PAGE HEADER-->
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="#/dashboard.html">Dashboard</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">Boxes</a>
+		</li>
+	</ul>
+	<div class="page-toolbar">
+		<div class="btn-group pull-right">
+		<div ng-controller="treeCtrl">
+			<button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" dropdown-menu-hover data-delay="1000" data-close-others="true">
+			Actions <i class="fa fa-angle-down"></i>
+			</button>
+			<ul class="dropdown-menu pull-right" role="menu">
+				<li>
+					<a href="" ng-click="collapseAllTree()">
+					<i class="icon-magnifier-remove"></i>Collapse all</a>
+				</li>
+				<li>
+					<a href="" ng-click="expandAllTree()">
+					<i class="icon-magnifier-add"></i> Expand all</a>
+				</li>
+				<li class="divider">
+				</li>
+				<li>
+					<a href="" ng-click="createNewBox()" >
+					<i class="icon-briefcase"></i> New Box </a>
+				</li>
+				<li>
+					<a href="" ng-click="createNewProject()" >
+					<i class="icon-folder-alt"></i> New Project</span>
+					</a>
+				</li>
+				<li>
+					<a href="" ng-click="createNewTask()" >
+					<i class="icon-doc"></i> New Task </a>
+				</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END PAGE HEADER-->
+
+<!-- BEGIN PAGE CONTENT-->
+<div class="row">
+	<div class="col-md-12">
+			<!-- BEGIN TODO CONTENT -->
+			<div class="todo-content">
+				<div class="portlet light">
+					<div class="container">
+						<div class="dhtmlxTree" 
+								    id="boxes_tree"
+								    setImagePath="js/scripts/img/dhxtree_boxes/"
+								    style="width:100%; height:100%;overflow:auto;">
+						</div>
+				</div>
+			</div>
+			<!-- END TODO CONTENT -->
+		</div>
+	</div>
+	<!-- END PAGE CONTENT-->
+</div>
+<!-- END MAIN CONTENT -->
+				<!-- END ACTUAL CONTENT -->
+			</div>	
+		</div>
+		<!-- END CONTENT -->
+		
+		<!-- BEGIN QUICK SIDEBAR -->
+		<a href="javascript:;" class="page-quick-sidebar-toggler"><i class="icon-close"></i></a>
+		<div data-ng-include="'tpl/quick-sidebar.html'" data-ng-controller="QuickSidebarController" class="page-quick-sidebar-wrapper"></div>
+		<!-- END QUICK SIDEBAR -->
+	</div>
+	<!-- END CONTAINER -->
+
+	<!-- BEGIN FOOTER -->
+	<div data-ng-include="'tpl/footer.html'" data-ng-controller="FooterController" class="page-footer">
+	</div>
+	<!-- END FOOTER -->
+</div>
+
+
+<script>
+/* Boxes.init(); */
+  </script>

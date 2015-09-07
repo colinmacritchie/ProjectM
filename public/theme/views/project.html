@@ -1,0 +1,360 @@
+<!-- BEGIN PAGE HEADER-->
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="#/dashboard.html">Dashboard</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<i class="icon-briefcase"></i>
+			<a href="#/boxes">Boxes</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">Project</a>
+		</li>
+	</ul>
+	<div class="page-toolbar">
+		<div class="btn-group pull-right">
+		<div ng-controller="treeCtrl">
+			<button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" dropdown-menu-hover data-delay="1000" data-close-others="true">
+			Actions <i class="fa fa-angle-down"></i>
+			</button>
+			<ul class="dropdown-menu pull-right" role="menu">
+				<li>
+					<a href="javascript:addWidget('itemStatus');">
+					<i class="icon-info"></i> View Status </a>
+				</li>
+				<li>
+					<a href="javascript:addWidget('itemTasks');">
+					<i class="icon-doc"></i> View Tasks </a>
+				</li>
+				<li>
+					<a href="javascript:addWidget('itemRoadMap');">
+					<i class="icon-graph"></i> View Road Map </a>
+				</li>
+				<li>
+					<a href="javascript:addWidget('itemActivities');">
+					<i class="icon-energy"></i> View Activities </a>
+				</li>
+				<li>
+					<a href="javascript:addWidget('itemNotes');">
+					<i class="icon-pencil"></i> View Notes </a>
+				</li>
+				<li>
+					<a href="javascript:addWidget('itemCalendar');">
+					<i class="icon-calendar"></i> View Calendar </a>
+				</li>
+				<li>
+					<a href="javascript:addWidget('itemTeam');">
+					<i class="icon-users"></i> View Team </a>
+				</li>
+				<li>
+					<a href="javascript:addWidget('itemAlerts');">
+					<i class="icon-bell"></i> View Alerts </a>
+				</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<h3 class="page-title">
+	Project Name
+</h3>
+<!-- END PAGE HEADER-->
+
+
+<div class="container">
+<!-- BEGIN PAGE CONTENT-->
+	<div class="row">
+		<div class="grid-stack">
+					
+				<div class="col-md-6 col-sm-6  grid-stack-item" data-custom-id="itemDetails" id="itemDetails"
+					data-gs-auto-position="true" data-gs-width="6" data-gs-height="5">
+					<!-- BEGIN PORTLET-->
+					<div class="portlet light grid-stack-item-content">
+						<div class="portlet-title">
+							<div class="caption caption-md">
+								<i class="icon-folder font-green-haze"></i>
+								<span class="caption-subject font-green-haze bold uppercase">Project</span>
+							</div>
+							<div class="actions">
+								<div class="btn-group">
+									<span ng-click="showIt=!showIt">
+										<a href="javascript:togglePin('itemDetails', false)" ng-show="!showIt" ><i class="icon-pin"></i></a>
+										<a href="javascript:togglePin('itemDetails', true)" ng-show="showIt"><i class="icon-cursor-move"></i></a>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="scroller" style="height: 329px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+
+							</div>
+						</div>
+					</div>
+					<!-- END PORTLET-->
+				</div>
+				
+				<div class="col-md-6 col-sm-6  grid-stack-item" data-custom-id="itemStatus" id="itemStatus"
+					data-gs-auto-position="true" data-gs-width="6" data-gs-height="5">
+					<!-- BEGIN PORTLET-->
+					<div class="portlet light grid-stack-item-content">
+						<div class="portlet-title">
+							<div class="caption caption-md">
+								<i class="icon-info font-green-haze"></i>
+								<span class="caption-subject font-green-haze bold uppercase">Status</span>
+							</div>
+							<div class="actions">
+								<div class="btn-group">
+									<span ng-click="showIt2=!showIt2">
+										<a href="javascript:togglePin('itemStatus', false)" ng-show="!showIt2" ><i class="icon-pin"></i></a>
+										<a href="javascript:togglePin('itemStatus', true)" ng-show="showIt2"><i class="icon-cursor-move"></i></a>
+									</span>
+									<a href="javascript:removeWidget('itemStatus')">
+										<i class="icon-close"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="scroller" style="height: 329px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+
+							</div>
+						</div>
+					</div>
+					<!-- END PORTLET-->
+				</div>
+				
+				<div class="col-md-6 col-sm-6  grid-stack-item" data-custom-id="itemRoadMap" id="itemRoadMap"
+					data-gs-auto-position="true" data-gs-width="6" data-gs-height="5">
+					<!-- BEGIN PORTLET-->
+					<div class="portlet light grid-stack-item-content">
+						<div class="portlet-title">
+							<div class="caption caption-md">
+								<i class="icon-graph font-green-haze"></i>
+								<span class="caption-subject font-green-haze bold uppercase">Road Map</span>
+							</div>
+							<div class="actions">
+								<div class="btn-group">
+									<span ng-click="showIt3=!showIt3">
+										<a href="javascript:togglePin('itemRoadMap', false)" ng-show="!showIt3" ><i class="icon-pin"></i></a>
+										<a href="javascript:togglePin('itemRoadMap', true)" ng-show="showIt3"><i class="icon-cursor-move"></i></a>
+									</span>
+									<a href="javascript:removeWidget('itemRoadMap')">
+										<i class="icon-close"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="scroller" style="height: 329px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+
+							</div>
+						</div>
+					</div>
+					<!-- END PORTLET-->
+				</div>
+				
+				<div class="col-md-6 col-sm-6  grid-stack-item" data-custom-id="itemTasks" id="itemTasks"
+					data-gs-auto-position="true" data-gs-width="6" data-gs-height="5">
+					<!-- BEGIN PORTLET-->
+					<div class="portlet light grid-stack-item-content">
+						<div class="portlet-title">
+							<div class="caption caption-md">
+								<i class="icon-doc font-green-haze"></i>
+								<span class="caption-subject font-green-haze bold uppercase">Tasks</span>
+							</div>
+							<div class="actions">
+								<div class="btn-group">
+									<span ng-click="showIt5=!showIt5">
+										<a href="javascript:togglePin('itemTasks', false)" ng-show="!showIt5" ><i class="icon-pin"></i></a>
+										<a href="javascript:togglePin('itemTasks', true)" ng-show="showIt5"><i class="icon-cursor-move"></i></a>
+									</span>
+									<a href="javascript:removeWidget('itemTasks')">
+										<i class="icon-close"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="scroller" style="height: 329px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+
+							</div>
+						</div>
+					</div>
+					<!-- END PORTLET-->
+				</div>
+				
+				<div class="col-md-6 col-sm-6  grid-stack-item" data-custom-id="itemActivities" id="itemActivities"
+					data-gs-auto-position="true" data-gs-width="6" data-gs-height="5">
+					<!-- BEGIN PORTLET-->
+					<div class="portlet light grid-stack-item-content">
+						<div class="portlet-title">
+							<div class="caption caption-md">
+								<i class="icon-energy font-green-haze"></i>
+								<span class="caption-subject font-green-haze bold uppercase">Activities</span>
+							</div>
+							<div class="actions">
+								<div class="btn-group">
+									<span ng-click="showIt4=!showIt4">
+										<a href="javascript:togglePin('itemActivities', false)" ng-show="!showIt4" ><i class="icon-pin"></i></a>
+										<a href="javascript:togglePin('itemActivities', true)" ng-show="showIt4"><i class="icon-cursor-move"></i></a>
+									</span>
+									<a href="javascript:removeWidget('itemActivities')">
+										<i class="icon-close"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="scroller" style="height: 329px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+
+							</div>
+						</div>
+					</div>
+					<!-- END PORTLET-->
+				</div>
+				
+				<div class="col-md-6 col-sm-6  grid-stack-item" data-custom-id="itemNotes" id="itemNotes"
+					data-gs-auto-position="true" data-gs-width="6" data-gs-height="5">
+					<!-- BEGIN PORTLET-->
+					<div class="portlet light grid-stack-item-content">
+						<div class="portlet-title">
+							<div class="caption caption-md">
+								<i class="icon-pencil font-green-haze"></i>
+								<span class="caption-subject font-green-haze bold uppercase">Notes</span>
+							</div>
+							<div class="actions">
+								<div class="btn-group">
+									<span ng-click="showIt6=!showIt6">
+										<a href="javascript:togglePin('itemNotes', false)" ng-show="!showIt6" ><i class="icon-pin"></i></a>
+										<a href="javascript:togglePin('itemNotes', true)" ng-show="showIt6"><i class="icon-cursor-move"></i></a>
+									</span>
+									<a href="javascript:removeWidget('itemNotes')">
+										<i class="icon-close"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="scroller" style="height: 329px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+
+							</div>
+						</div>
+					</div>
+					<!-- END PORTLET-->
+				</div>
+				
+				<div class="col-md-6 col-sm-6  grid-stack-item" data-custom-id="itemCalendar" id="itemCalendar"
+					data-gs-auto-position="true" data-gs-width="6" data-gs-height="5">
+					<!-- BEGIN PORTLET-->
+					<div class="portlet light grid-stack-item-content">
+						<div class="portlet-title">
+							<div class="caption caption-md">
+								<i class="icon-calendar font-green-haze"></i>
+								<span class="caption-subject font-green-haze bold uppercase">Calendar</span>
+							</div>
+							<div class="actions">
+								<div class="btn-group">
+									<span ng-click="showIt7=!showIt7">
+										<a href="javascript:togglePin('itemCalendar', false)" ng-show="!showIt7" ><i class="icon-pin"></i></a>
+										<a href="javascript:togglePin('itemCalendar', true)" ng-show="showIt7"><i class="icon-cursor-move"></i></a>
+									</span>
+									<a href="javascript:removeWidget('itemCalendar')">
+										<i class="icon-close"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="scroller" style="height: 329px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+
+							</div>
+						</div>
+					</div>
+					<!-- END PORTLET-->
+				</div>
+				
+				<div class="col-md-6 col-sm-6  grid-stack-item" data-custom-id="itemTeam" id="itemTeam"
+					data-gs-auto-position="true" data-gs-width="6" data-gs-height="5">
+					<!-- BEGIN PORTLET-->
+					<div class="portlet light grid-stack-item-content">
+						<div class="portlet-title">
+							<div class="caption caption-md">
+								<i class="icon-users font-green-haze"></i>
+								<span class="caption-subject font-green-haze bold uppercase">Team</span>
+							</div>
+							<div class="actions">
+								<div class="btn-group">
+									<span ng-click="showIt8=!showIt8">
+										<a href="javascript:togglePin('itemTeam', false)" ng-show="!showIt8" ><i class="icon-pin"></i></a>
+										<a href="javascript:togglePin('itemTeam', true)" ng-show="showIt8"><i class="icon-cursor-move"></i></a>
+									</span>
+									<a href="javascript:removeWidget('itemTeam')">
+										<i class="icon-close"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="scroller" style="height: 329px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+
+							</div>
+						</div>
+					</div>
+					<!-- END PORTLET-->
+				</div>
+		
+				<div class="col-md-6 col-sm-6  grid-stack-item" data-custom-id="itemAlerts" id="itemAlerts"
+					data-gs-auto-position="true" data-gs-width="6" data-gs-height="5">
+					<!-- BEGIN PORTLET-->
+					<div class="portlet light grid-stack-item-content">
+						<div class="portlet-title">
+							<div class="caption caption-md">
+								<i class="icon-bell font-green-haze"></i>
+								<span class="caption-subject font-green-haze bold uppercase">Alerts</span>
+							</div>
+							<div class="actions">
+								<div class="btn-group">
+									<span ng-click="showIt9=!showIt9">
+										<a href="javascript:togglePin('itemAlerts', false)" ng-show="!showIt9" ><i class="icon-pin"></i></a>
+										<a href="javascript:togglePin('itemAlerts', true)" ng-show="showIt9"><i class="icon-cursor-move"></i></a>
+									</span>
+									<a href="javascript:removeWidget('itemAlerts')">
+										<i class="icon-close"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="scroller" style="height: 329px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+
+							</div>
+						</div>
+					</div>
+					<!-- END PORTLET-->
+				</div>
+				
+		<script type="text/javascript">
+			$(function () {
+			    var options = {
+			        cell_height: 80,
+			        vertical_margin: 10
+			    };
+			    $('.grid-stack').gridstack(options);
+			});
+		</script>
+		
+		</div>
+	</div>
+	<!-- END PAGE CONTENT-->
+</div>
+<!-- END PAGE CONTENT-->
+
+
+<script>
+Project.init(); // init  page
+loadProjectDashboardGrid();
+  </script>

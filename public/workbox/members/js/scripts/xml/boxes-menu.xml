@@ -1,0 +1,8 @@
+<menu id="0">
+	<item text="View" img="" id="view"/>
+	<item text="Create Box" img="" id="createBox"/>
+	<item text="Create Project" img="" id="createProject"/>
+	<item text="Create Task" img="" id="createTask"/>
+	<item text="Rename" img="" id="rename"/>
+	<item text="Remove" img="" id="remove"/>
+</menu>
